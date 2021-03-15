@@ -58,6 +58,8 @@ class WapPurchaseRequest extends AbstractRequest
             'body'            => $this->getBody(),//<>
             'product_code'    => $this->getProductCode(),
             'split_fund_info' => $this->getSplitFundInfo(),
+            'payment_inst'    => $this->getPaymentInst(),
+            'refer_url' => "http://www.mikascoffee.com",
         );
 
         $data = array_filter($data);
@@ -67,6 +69,14 @@ class WapPurchaseRequest extends AbstractRequest
         return $data;
     }
 
+    public function getPaymentInst(){
+        return $this->getParameter('payment_inst');
+    }
+
+    public function setPaymentInst($value)
+    {
+        return $this->setParameter('payment_inst', $value);
+    }
 
     /**
      * Send the request with specified data

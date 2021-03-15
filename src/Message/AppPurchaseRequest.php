@@ -53,6 +53,8 @@ class AppPurchaseRequest extends AbstractRequest
             'it_b_pay'       => $this->getItBPay() ?: '1d',
             'show_url'       => $this->getShowUrl(),//<>
             'extern_token'   => $this->getExternToken(),//<>
+            'payment_inst'   => $this->getPaymentInst(),
+            'product_code' => 'NEW_WAP_OVERSEAS_SELLER',
         );
 
         $data = array_filter($data);
@@ -60,6 +62,14 @@ class AppPurchaseRequest extends AbstractRequest
         return $data;
     }
 
+    public function getPaymentInst(){
+        return $this->getParameter('payment_inst');
+    }
+
+    public function setPaymentInst($value)
+    {
+        return $this->setParameter('payment_inst', $value);
+    }
 
     /**
      * Send the request with specified data

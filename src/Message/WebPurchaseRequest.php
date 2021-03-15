@@ -57,6 +57,9 @@ class WebPurchaseRequest extends AbstractRequest
             'seller_name'           => $this->getSellerIndustry(),//<>
             'split_fund_info'       => $this->getSplitFundInfo(),
             'product_code'          => $this->getProductCode() ?: 'NEW_OVERSEAS_SELLER',
+            'qr_pay_mode'          => 4,
+            'qrcode_width'          => 4,
+            'payment_inst'          => $this->getPaymentInst(),
         );
 
         $data = array_filter($data);
@@ -81,6 +84,15 @@ class WebPurchaseRequest extends AbstractRequest
         return $this->response = new WebPurchaseResponse($this, $responseData);
     }
 
+
+    public function getPaymentInst(){
+        return $this->getParameter('payment_inst');
+    }
+
+    public function setPaymentInst($value)
+    {
+        return $this->setParameter('payment_inst', $value);
+    }
 
     public function getKey()
     {
