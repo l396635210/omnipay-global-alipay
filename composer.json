@@ -1,7 +1,7 @@
 {
-    "name": "lokielse/omnipay-global-alipay",
+    "name": "liz/omnipay-global-alipay",
     "type": "library",
-    "description": "Alipay global gateway for Omnipay payment processing library",
+    "description": "Alipay global gateway froked from lokielse/omnipay-global-alipay for Omnipay payment processing library",
     "keywords": [
         "alipay",
         "gateway",
@@ -14,7 +14,7 @@
         "payment",
         "purchase"
     ],
-    "homepage": "https://github.com/lokielse/omnipay-global-alipay",
+    "homepage": "https://github.com/l396635210/omnipay-global-alipay",
     "license": "MIT",
     "authors": [
         {
